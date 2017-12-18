@@ -8,7 +8,7 @@ CLAMAV_UNIX_SOCKET = getattr(_settings, 'CLAMAV_UNIX_SOCKET', None)
 if CLAMAV_UNIX_SOCKET is None:
     known_list = [
         '/var/run/clamd.scan/clamd.sock',  # Fedora, CentOS
-        '/var/run/clamav/clamd.ctl'  # Ubuntu, Debian based
+        '/var/run/clamav/clamd.ctl',  # Ubuntu, Debian based
         '/var/lib/clamav/clamd.sock'  # Arch
     ]
     for path in known_list:

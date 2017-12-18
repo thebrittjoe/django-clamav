@@ -6,12 +6,15 @@ from django.conf import settings as _settings
 CLAMAV_UNIX_SOCKET = getattr(_settings, 'CLAMAV_UNIX_SOCKET', None)
 
 if CLAMAV_UNIX_SOCKET is None:
-    if os.path.exists('/var/run/clamd.scan/'):
-        # Fedora, CentOS
-        CLAMAV_UNIX_SOCKET = '/var/run/clamd.scan/clamd.sock'
-    else:
-        # This is default for Ubuntu, Debian based distros
-        CLAMAV_UNIX_SOCKET = '/var/run/clamav/clamd.ctl'
+    known_list = [
+        '/var/run/clamd.scan/clamd.sock',  # Fedora, CentOS
+        '/var/run/clamav/clamd.ctl'  # Ubuntu, Debian based
+        '/var/lib/clamav/clamd.sock'  # Arch
+    ]
+    for path in known_list:
+        if os.path.exists(path):
+            CLAMAV_UNIX_SOCKET = path
+            break
 
 # If you want to use TCP socket set this to True
 CLAMAV_USE_TCP = getattr(_settings, 'CLAMAV_USE_TCP', False)

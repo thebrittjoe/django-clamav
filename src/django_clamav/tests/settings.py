@@ -9,7 +9,7 @@ DATABASES = {
 
 
 INSTALLED_APPS = [
-    'django_clamd',
+    'django_clamav',
 ]
 
 SECRET_KEY = 'Anti virus scanner'

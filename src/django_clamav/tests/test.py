@@ -2,7 +2,7 @@ import os
 import clamd
 
 # Ensure we can import django
-os.environ['DJANGO_SETTINGS_MODULE'] = 'django_clamd.tests.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'django_clamav.tests.settings'
 
 import django
 if hasattr(django, 'setup'):
@@ -11,7 +11,7 @@ if hasattr(django, 'setup'):
 
 from django.test import TestCase
 from django.core.files.uploadedfile import SimpleUploadedFile
-from django_clamd.validators import validate_file_infection
+from django_clamav.validators import validate_file_infection
 from .forms import UploadForm
 
 
@@ -22,7 +22,7 @@ class VirusValidatorTestCase(TestCase):
 
         self.assertFalse(form.is_valid())
         self.assertEqual(form.errors, {
-            'upload_file': ['File is infected with malware.']
+            'upload_file': ['File is infected with malware']
         })
 
     def test_has_not_virus(self):

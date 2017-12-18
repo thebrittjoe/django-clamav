@@ -1,5 +1,5 @@
 from django import forms
-from django_clamd.validators import validate_file_infection
+from django_clamav.validators import validate_file_infection
 
 
 class UploadForm(forms.Form):

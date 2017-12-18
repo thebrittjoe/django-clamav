@@ -1,25 +1,19 @@
 #!/usr/bin/env python
 from setuptools import setup, find_packages
 
-with open('README.rst') as readme:
+with open('README.md') as readme:
     readme = readme.read()
 
 setup(
-    name="django-clamd",
+    name="django-clamav",
     version='0.4.0',
-    author="Venelin Stoykov",
-    author_email="vkstoykov@gmail.com",
-    maintainer="Venelin Stoykov",
-    maintainer_email="vkstoykov@gmail.com",
     keywords="python, django, clamav, antivirus, scanner, virus, libclamav, clamd",
-    description="django-clamd is a django integration with Clamd (Clamav daemon).",
+    description="django-clamav is a django integration with Clamd (Clamav daemon).",
     long_description=readme,
-    url="https://github.com/vstoykov/django-clamd",
-    download_url="https://github.com/vstoykov/django-clamd/releases",
-    bugtrack_url="https://github.com/vstoykov/django-clamd/issues",
+    url="https://github.com/QueraTeam/django-clamav",
     package_dir={'': 'src'},
     packages=find_packages('src', exclude="tests"),
-    package_data={'django_clamd': [
+    package_data={'django_clamav': [
         'locale/*/LC_MESSAGES/*.po',
         'locale/*/LC_MESSAGES/*.mo',
     ]},

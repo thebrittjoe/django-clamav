@@ -1,0 +1,11 @@
+msgid ""
+msgstr ""
+
+"Language-Team: \n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "File is infected with malware"
+msgstr "فایل آلوده به بدافزار است"

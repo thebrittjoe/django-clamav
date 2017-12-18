@@ -19,5 +19,5 @@ msgstr ""
 "X-Generator: Poedit 1.8.7.1\n"
 
 #: validators.py:20
-msgid "File is infected with malware."
-msgstr "Файлът е инфектиран с malware."
+msgid "File is infected with malware"
+msgstr "Файлът е инфектиран с malware"

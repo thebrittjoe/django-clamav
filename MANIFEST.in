@@ -1,2 +1,2 @@
 include README.rst
-recursive-include src/django_clamd/locale *
+recursive-include src/django_clamav/locale *

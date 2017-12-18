@@ -48,8 +48,6 @@ Configuration
 By default `django-clamav` tries to be smart and with good defaults.
 You can still configure how to connect to Clamd. Default values are:
 
-.. code-block:: python
-
     CLAMAV_UNIX_SOCKET = '/var/run/clamav/clamd.ctl'
     CLAMAV_USE_TCP = False
     CLAMAV_TCP_PORT = 3310
@@ -58,13 +56,9 @@ You can still configure how to connect to Clamd. Default values are:
 Note: When you are running on Fedora or CentOS and :code:`clamav-scanner`
 package is installed then default value for :code:`CLAMAV_UNIX_SOCKET` is:
 
-.. code-block:: python
-
     CLAMAV_UNIX_SOCKET = '/var/run/clamd.scan/clamd.sock'
 
 You also can disable virus scanning for development with:
-
-.. code-block:: python
 
     CLAMAV_ENABLED = False
 

@@ -68,4 +68,4 @@ the need of installing Clamd on devlopment machine.
 
 License
 -------
-`django-clamd` is released as open-source software under the LGPL license.
+`django-clamav` is released as open-source software under the LGPL license.

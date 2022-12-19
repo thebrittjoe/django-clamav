@@ -1,7 +1,6 @@
 import logging
 
 from django.core.exceptions import ValidationError
-from django.utils.translation import ugettext_lazy as _
 
 from django_clamav import get_scanner
 from .conf import CLAMAV_ENABLED
